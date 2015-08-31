@@ -1,0 +1,123 @@
+{
+  "before": "%defaults",
+
+  "service": {
+    "babel": { "proto": "tcp", "port": 6697 },
+    "bacula-dir": { "proto": "tcp", "port": 9101 }, 
+    "bacula-fd": { "proto": "tcp", "port": 9102 }, 
+    "bacula-sd": { "proto": "tcp", "port": 9103 }, 
+    "bgp": { "proto": "tcp", "port": 179 },
+    "dhcp": { "proto": "udp", "port": [ 67, 68 ] },
+    "discard": [
+      { "proto": "udp", "port": 9 },
+      { "proto": "tcp", "port": 9 }
+    ],
+    "dns": [
+      { "proto": "udp", "port": 53 },
+      { "proto": "tcp", "port": 53 }
+    ],
+    "epmap": [
+      { "proto": "tcp", "port": 135 },
+      { "proto": "udp", "port": 135 }
+    ],
+    "ftp": { "proto": "tcp", "port": 21, "ct-helper": "ftp" },
+    "gre": { "proto": "gre" },
+    "hp-pdl": { "proto": "tcp", "port": 9100 },
+    "http": { "proto": "tcp", "port": 80 },
+    "http-alt": { "proto": "tcp", "port": 8080 },
+    "https": { "proto": "tcp", "port": 443 },
+    "icmp": { "proto": "icmp" },
+    "igmp": { "proto": "igmp" },
+    "imap": { "proto": "tcp", "port": 143 },
+    "imaps": { "proto": "tcp", "port": 993 },
+    "ipsec": [
+      { "proto": "esp" },
+      { "proto": "udp", "port": [ 500, 4500 ] }
+    ],
+    "irc": { "proto": "tcp", "port": 6667, "ct-helper": "irc" },
+    "kerberos": [
+      { "proto": "tcp", "port": 88 },
+      { "proto": "udp", "port": 88 }
+    ],
+    "kpasswd": [
+      { "proto": "tcp", "port": 464 },
+      { "proto": "udp", "port": 464 }
+    ],
+    "ldap": [
+      { "proto": "tcp", "port": 389 },
+      { "proto": "udp", "port": 389 }
+    ],
+    "ldaps": [
+      { "proto": "tcp", "port": 636 },
+      { "proto": "udp", "port": 636 }
+    ],
+    "microsoft-ds": [
+      { "proto": "tcp", "port": 445 },
+      { "proto": "udp", "port": 445 }
+    ],
+    "ms-sql-s": { "proto": "tcp", "port": 1433 },
+    "ms-sql-m": { "proto": "tcp", "port": 1434 },
+    "msft-gc": [
+      { "proto": "tcp", "port": 3268 },
+      { "proto": "udp", "port": 3268 }
+    ],
+    "msft-gc-ssl": [
+      { "proto": "tcp", "port": 3269 },
+      { "proto": "udp", "port": 3269 }
+    ],
+    "netbios-ds": [
+      { "proto": "tcp", "port": 138 },
+      { "proto": "udp", "port": 138 }
+    ],
+    "netbios-ns": [
+      { "family": "inet", "proto": "tcp", "port": 137 },
+      {
+        "family": "inet",
+        "proto": "udp",
+        "port": 137,
+        "ct-helper": "netbios-ns"
+      }
+    ],
+    "netbios-ssn": [
+      { "proto": "tcp", "port": 139 },
+      { "proto": "udp", "port": 139 }
+    ],
+    "ntp": { "proto": "udp", "port": 123 },
+    "ospf": { "proto": "ospf" },
+    "pgsql": { "proto": "tcp", "port": 5432 },
+    "ping": [
+      { "proto": "icmp", "type": 8, "reply-type": 0 },
+      { "proto": "icmpv6", "type": 128, "reply-type": 129 }
+    ],
+    "pop3": { "proto": "tcp", "port": 110 },
+    "pop3s": { "proto": "tcp", "port": 995 },
+    "radius": [
+      { "proto": "udp", "port": 1812 },
+      { "proto": "tcp", "port": 1812 }
+    ],
+    "radius-acct": [
+      { "proto": "udp", "port": 1813 },
+      { "proto": "tcp", "port": 1813 }
+    ],
+    "rdp": { "proto": "tcp", "port": 3389 },
+    "rsync": { "proto": "tcp", "port": 873 },
+    "rtsp": { "proto": "tcp", "port": 554 },
+    "sip": [
+    	{ "proto": "udp", "port": 5060, "ct-helper": "sip" },
+    	{ "proto": "tcp", "port": 5060, "ct-helper": "sip" }
+    ],
+    "sip-tls": [
+      { "proto": "udp", "port": 5061 },
+      { "proto": "tcp", "port": 5061 }
+    ],
+    "smtp": { "proto": "tcp", "port": 25 },
+    "snmp": { "proto": "udp", "port": 161 },
+    "snmp-trap": { "proto": "udp", "port": 162 },
+    "ssh": { "proto": "tcp", "port": 22 },
+    "submission": { "proto": "tcp", "port": 587 },
+    "syslog": { "proto": "udp", "port": 514 },
+    "telnet": { "proto": "tcp", "port": 23 },
+    "tftp": { "proto": "udp", "port": 69 },
+    "vnc": { "proto": "tcp", "port": 5900 }
+  }
+}
